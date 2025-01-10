@@ -87,7 +87,10 @@ const Navbar = () => {
         hover:text-blue-500 hover:opacity-100"
         >
           <a href="https://www.linkedin.com/in/andresito87/" target="_blank">
-            <BsLinkedin />
+            <BsLinkedin
+              title="image logo LinkedIn"
+              aria-label="image logo LinkedIn"
+            />
           </a>
         </li>
         <li
@@ -95,7 +98,10 @@ const Navbar = () => {
         hover:text-orange-500 hover:opacity-100"
         >
           <a href="https://github.com/andresito87" target="_blank">
-            <BsGithub />
+            <BsGithub
+              title="image logo github"
+              aria-label="image logo github"
+            />
           </a>
         </li>
         <li
@@ -106,7 +112,10 @@ const Navbar = () => {
             href="/assets/Andres_Podadera_CV.pdf"
             download="Andres_Podadera_CV.pdf"
           >
-            <TbFileCv />
+            <TbFileCv
+              title="image logo cv file"
+              aria-label="image logo cv file"
+            />
           </a>
         </li>
         <li
@@ -117,7 +126,10 @@ const Navbar = () => {
             href="https://discord.com/users/937298448829530132"
             target="_blank"
           >
-            <BsDiscord />
+            <BsDiscord
+              title="image logo discord"
+              aria-label="image logo discord"
+            />
           </a>
         </li>
       </ul>
@@ -169,7 +181,10 @@ const Navbar = () => {
                 href="https://www.linkedin.com/in/andresito87/"
                 target="_blank"
               >
-                <BsLinkedin />
+                <BsLinkedin
+                  title="image logo LinkedIn"
+                  aria-label="image logo LinkedIn"
+                />
               </a>
             </li>
             <li
@@ -177,14 +192,20 @@ const Navbar = () => {
         hover:text-orange-500 hover:opacity-100"
             >
               <a href="https://github.com/andresito87" target="_blank">
-                <BsGithub />
+                <BsGithub
+                  title="image logo github"
+                  aria-label="image logo github"
+                />
               </a>
             </li>
             <li
               className="cursor-pointer text-xl opacity-70 transition-all duration-300 
         hover:text-red-500 hover:opacity-100"
             >
-              <TbFileCv />
+              <TbFileCv
+                title="image logo cv file"
+                aria-label="image logo cv file"
+              />
             </li>
             <li
               className="cursor-pointer text-xl opacity-70 transition-all duration-300 
@@ -194,7 +215,10 @@ const Navbar = () => {
                 href="https://discord.com/users/937298448829530132"
                 target="_blank"
               >
-                <BsDiscord />
+                <BsDiscord
+                  title="image logo discord"
+                  aria-label="image logo discord"
+                />
               </a>
             </li>
           </ul>

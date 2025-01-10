@@ -1,4 +1,3 @@
-import { BiLink } from "react-icons/bi";
 import imageBookNetwork from "/assets/BookSocialNetwork.png";
 import imageSurfCamp from "/assets/SurfCamp.png";
 import imageFlixx from "/assets/flixx.png";
@@ -13,6 +12,7 @@ const projectsData = [
     description: "Allows to buy products",
     technologies: ["Angular", "Laravel", "MySql"],
     link: "https://github.com/andresito87/mediashop",
+    alt: "image mediashop app",
   },
   {
     image: imageBookNetwork,
@@ -20,6 +20,7 @@ const projectsData = [
     description: "Allows to share books between partners",
     technologies: ["React", "Java", "SpringBoot", "MySQL"],
     link: "https://github.com/andresito87/book-social-network",
+    alt: "image book social network app",
   },
   {
     image: imageSurfCamp,
@@ -27,6 +28,7 @@ const projectsData = [
     description: "Allows to get info about the camp",
     technologies: ["Next.js", "Scrapi", "Sass"],
     link: "https://github.com/andresito87/Surf-Camp-Blog",
+    alt: "image surf camp blog",
   },
   {
     image: imageFlixx,
@@ -34,6 +36,7 @@ const projectsData = [
     description: "Allows to get info about movies and series",
     technologies: ["HTML", "CSS", "JavaScript"],
     link: "https://stunning-entremet-c3997b.netlify.app/",
+    alt: "image flixx app",
   },
 ];
 
@@ -54,19 +57,18 @@ const ProjectCard = ({ project }) => {
   return (
     <ScrollReveal>
       <div className="flex flex-col items-center gap-8 md:flex-row md:gap-24">
-        <img
-          src={project.image}
-          alt=""
-          className="w-full rounded-2xl transition-all
+        <a href={project.link} target="_blank">
+          <img
+            src={project.image}
+            alt={project.alt}
+            className="w-full rounded-2xl transition-all
        duration-300 hover:scale-105 md:w-[350px]"
-        />
+          />
+        </a>
         <div className="flex flex-col gap-5">
           <div className="flex flex-col gap-3">
             <div className="flex items-center text-xl font-semibold">
               {project.title}
-              <a href={project.link} target="_blank">
-                <BiLink className="text-2xl ml-4" />
-              </a>
             </div>
             <p className="text-gray-400">{project.description}</p>
           </div>
@@ -90,6 +92,7 @@ ProjectCard.propTypes = {
     description: PropTypes.string.isRequired,
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
     link: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
   }).isRequired,
 };
 
